@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BaseDatos.Helpers"
+             x:Class="BaseDatos.Views.AutoresDetalle"
+             Title="AutoresDetalle">
+    
+
+        <ContentPage.Resources>
+            <ResourceDictionary>
+                <local:Base64ToImageConverter x:Key="Base64ToImageConverter" />
+            </ResourceDictionary>
+        </ContentPage.Resources>
+        <ScrollView>
+            <ListView x:Name="personasListView" RowHeight="150" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!-- Usamos un ViewCell para mostrar múltiples datos -->
+                        <ViewCell>
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItem Text="Eliminar" 
+                                   BackgroundColor="Red" 
+                                   CommandParameter="{Binding .}"
+                                   Invoked="EliminarAutor_SwipeItemInvoked" />
+                                </SwipeView.RightItems>
+
+                            <SwipeView.LeftItems>
+                                <SwipeItem Text="Modificar" 
+                                   BackgroundColor="#20d8d0" 
+                                   CommandParameter="{Binding .}"
+                                   Invoked="OnItemTapped" />
+                            </SwipeView.LeftItems>
+
+                            <StackLayout Orientation="Vertical" Padding="10">
+                                    <Label Text="{Binding Nombre}" FontSize="20" />
+                                    <Label Text="{Binding Nacionalidad}" FontSize="18" />
+                                    <Image Source="{Binding FotoBase64, Converter={StaticResource Base64ToImageConverter}}" HeightRequest="100" />
+
+
+                                    <!-- Agregar la fecha en el formato deseado -->
+                                </StackLayout>
+                            </SwipeView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+
+</ContentPage>

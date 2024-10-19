@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BaseDatos.Views.PageInit"
+             Title="PageInit">
+    <VerticalStackLayout>
+
+        <Entry x:Name="nombres"
+                Placeholder="Ingrese su nombre"
+                Keyboard="Text"/>
+
+        <Entry x:Name="apellidos"
+                Placeholder="Ingrese su apellido"
+                Keyboard="Text"/>
+
+        <DatePicker x:Name="Fecha"
+                Format="d"/>
+
+        <Entry x:Name="Tel"
+                Placeholder="Ingrese su telefono"
+                Keyboard="Telephone"/>
+
+        <Button x:Name="btnagregar"
+                Text="Agregar"
+                Clicked="btnagregar_Clicked"
+                Margin="5"/>
+
+        <Button x:Name="btnnave"
+                Text="Lista"
+                Clicked="btnnave_Clicked"
+                Margin="5"/>
+
+    </VerticalStackLayout>
+</ContentPage>
