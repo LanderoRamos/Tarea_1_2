@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BaseDatos.Views.Foto_ComboBox"
+             Title="Foto_ComboBox">
+    <VerticalStackLayout>
+
+        <Label 
+            Text="Autores de Libros"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Image x:Name="capturedImage"
+               WidthRequest="200"
+               HeightRequest="200"/>
+
+        <Button Text="Foto"
+                x:Name="Foto"
+                Clicked="TakePhoto" 
+                Margin="10"/>
+
+        <Label 
+            Text="Autores de Libros"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="MyEntry_Nombre" 
+               Placeholder="Ingresa Su Nombre Completo" 
+               TextChanged="OnTextChanged"/>
+
+        <Picker x:Name="myPicker"
+                Title="Elige una opción" />
+
+        <Button Text="Agregar"
+                x:Name="Agregar"
+                Clicked="Agregar1" 
+                Margin="5"/>
+        
+        <Button x:Name="btnnave"
+                 Text="Lista"
+                 Clicked="VerLista"/>
+
+    </VerticalStackLayout>
+</ContentPage>

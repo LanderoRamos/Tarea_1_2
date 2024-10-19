@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BaseDatos.Views.PageDetalle"
+             Title="PageDetalle">
+    <VerticalStackLayout>
+        
+        <Label 
+            Text="{Binding Nombre}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="{Binding Apellido}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="{Binding fecha}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label Text="Lista de Personas"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                Margin="5"/>
+
+        <ListView x:Name="personasListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Usamos un ViewCell para mostrar múltiples datos -->
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Padding="10">
+                            <Label Text="{Binding Nombre}" FontSize="20" />
+                            <Label Text="{Binding Apellido}" FontSize="18" />
+                            <Label Text="{Binding Telefono}" FontSize="18" />
+                            <!-- Agregar la fecha en el formato deseado -->
+                            <Label Text="{Binding fecha, StringFormat='{0:dd/MM/yyyy}'}" FontSize="16" TextColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </VerticalStackLayout>
+</ContentPage>
