@@ -93,11 +93,7 @@ public partial class Foto_ComboBox : ContentPage
             await DisplayAlert("Aviso", "Registrado sin exito", "OK");
         }
          
-        
-        
 
-
-        
 
         //        DisplayAlert("El resultado es:", "Foto: " + base64Image + " \n" +"Nombre: " + Nombre + "\n" +"Nacionalidad: " + myPicker.SelectedItem, "ok");
     }

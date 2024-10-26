@@ -67,9 +67,11 @@
 	  <MauiXaml Update="Views\AutoresDetalle.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+
 	  <MauiXaml Update="Views\EditarAutoresPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+
 	  <MauiXaml Update="Views\Foto_ComboBox.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

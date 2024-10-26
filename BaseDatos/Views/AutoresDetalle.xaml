@@ -4,13 +4,16 @@
              xmlns:local="clr-namespace:BaseDatos.Helpers"
              x:Class="BaseDatos.Views.AutoresDetalle"
              Title="AutoresDetalle">
-    
+
+   
+
 
         <ContentPage.Resources>
             <ResourceDictionary>
                 <local:Base64ToImageConverter x:Key="Base64ToImageConverter" />
             </ResourceDictionary>
         </ContentPage.Resources>
+
         <ScrollView>
             <ListView x:Name="personasListView" RowHeight="150" >
                 <ListView.ItemTemplate>
@@ -47,4 +50,6 @@
             </ListView>
         </ScrollView>
 
+
+   
 </ContentPage>

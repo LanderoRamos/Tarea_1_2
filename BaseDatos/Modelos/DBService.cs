@@ -72,6 +72,8 @@ namespace BaseDatos.Modelos
                 Console.WriteLine("Autor actualizado: " + await _connection.UpdateAsync(autores));
                 return await _connection.UpdateAsync(autores);
                 
+
+            
             }
         }
         //read

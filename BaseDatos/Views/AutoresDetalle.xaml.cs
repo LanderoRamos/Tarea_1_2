@@ -74,4 +74,5 @@ public partial class AutoresDetalle : ContentPage
     }
 
 
+
 }
